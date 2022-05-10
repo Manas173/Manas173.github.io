@@ -6,6 +6,7 @@
     box-sizing: border-box;
     text-decoration: none; 
 }
+
 .max-width{
     padding: 0 80px;
     margin: auto;
@@ -122,7 +123,7 @@
     margin: auto 0 auto 40px;
 }
 
-.about, .services{
+.about, .services, .skills{
     font-family:  'Poppins','sans-serif';
 }
 
@@ -159,6 +160,39 @@
     transform: translateX(-50%);
 }
 
+.section-serv .title{
+    position: relative;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    padding-bottom: 20px;
+    font-family: 'Ubuntu', 'sans-serif';
+}
+
+.section-serv .max-width .title::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 180px;
+    height: 3px;
+    background: #fff;
+    transform: translateX(-50%);
+}
+
+.section-serv .max-width .title::after{
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    font-size: 20px;
+    color: crimson;
+    padding: 5px;
+    background: #111;
+    transform: translateX(-50%);
+}
+
 .services .title::before{
     content: "";
 }
@@ -172,7 +206,7 @@
     content: "who i am";
 }
 
-.about .about-content, .services .serv-content{
+.about .about-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -494,5 +528,125 @@
 
 /* Services */
 .services{
+    background: #111;
+    color: #fff;
     padding-top: 10px;
+}
+
+.services .servcontent{
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.services .servcontent .card{
+    background: #222;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    margin-bottom: 55px;
+    cursor: pointer;
+    height: 200px;
+}
+
+.services .servcontent .card:hover{
+    background: crimson;
+    color: white;
+    transition: all 0.5s ease;
+    transform: scale(1.02);
+}
+
+@media (max-width: 1775px){
+    .services .servcontent{
+        display: grid;
+        grid-template-columns: 23% 23% 23% 23%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .services .servcontent .card{
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 20px 25px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        height: 320px;
+    }
+}
+
+@media (max-width: 1104px){
+    .services .servcontent{
+        display: grid;
+        grid-template-columns: 100%;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .services .servcontent .card{
+        background: #222;
+        text-align: center;
+        border-radius: 6px;
+        padding: 20px 25px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        height: auto;
+    }
+}
+
+.skills .title::before{
+    content: "";
+}
+
+.skills .title::after{
+    content: "what i do";
+    color: crimson;
+}
+
+.skills .bars .info{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.skills .line{
+    height: 5px;
+    width: 100%;
+    background: lightgray;
+    position: relative;
+}
+
+.skills .line::before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 80%;
+    background: crimson;
+}
+
+.skills .line .c::before{
+    width: 85%;
+}
+.skills .line .java::before{
+    width: 80%;
+}
+.skills .spring::before{
+    width: 70%;
+}
+.skills .html::before{
+    width: 60%;
+}
+.skills .css::before{
+    width: 50%;
+}
+.skills .javascript::before{
+    width: 80%;
+}
+.skills .react::before{
+    width: 75%;
+}
+.skills .mysql::before{
+    width: 30%;
 }
