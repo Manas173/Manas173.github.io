@@ -111,7 +111,7 @@
 
 .home{
     display: flex;
-    background: url("images/Portfolio.jpg") no-repeat; 
+    background: url("images/Portfolio.jpg") no-repeat center; 
     height: 100vh;
     color: #fff;
     min-height: 500px;
