@@ -122,11 +122,11 @@
     margin: auto 0 auto 40px;
 }
 
-.about{
+.about, .services{
     font-family:  'Poppins','sans-serif';
 }
 
-.about .title{
+.section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -137,7 +137,7 @@
     font-family: 'Ubuntu', 'sans-serif';
 }
 
-.about .max-width .title::before{
+.section .max-width .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -148,8 +148,7 @@
     transform: translateX(-50%);
 }
 
-.about .max-width .title::after{
-    content: "who i am";
+.section .max-width .title::after{
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -160,7 +159,20 @@
     transform: translateX(-50%);
 }
 
-.about .about-content{
+.services .title::before{
+    content: "";
+}
+
+.services .title::after{
+    content: "where i work";
+    color: crimson;
+}
+
+.about .title::after{
+    content: "who i am";
+}
+
+.about .about-content, .services .serv-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -264,7 +276,7 @@
         z-index: 999;
     }
 
-    .menu-btn i.active:before{
+    .menu-btn i.active::before{
         content: "\f00d";
     }
 
@@ -478,4 +490,9 @@
         border-radius: 6px;
         border: 2px solid crimson;
     }
+}
+
+/* Services */
+.services{
+    padding-top: 10px;
 }
