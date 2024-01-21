@@ -25,6 +25,11 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+  transition: 3s;
+}
+
 /* Navbar styling */
 .navbar {
   position: fixed;
@@ -607,7 +612,8 @@
 }
 
 .skills .bars .info {
-  margin-bottom: 15px;
+  margin-top: 10px;
+  margin-bottom: 5px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -632,13 +638,19 @@
   width: 85%;
 }
 .skills .line .java::before {
-  width: 80%;
+  width: 100%;
 }
 .skills .spring::before {
+  width: 100%;
+}
+.skills .hibernate::before {
+  width: 100%;
+}
+.skills .aws::before {
   width: 70%;
 }
-.skills .html::before {
-  width: 60%;
+.skills .kubernetes::before {
+  width: 80%;
 }
 .skills .css::before {
   width: 50%;
@@ -646,11 +658,11 @@
 .skills .javascript::before {
   width: 80%;
 }
-.skills .react::before {
-  width: 75%;
+.skills .git::before {
+  width: 100%;
 }
 .skills .mysql::before {
-  width: 30%;
+  width: 80%;
 }
 
 .contact .title {
