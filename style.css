@@ -914,6 +914,10 @@ html {
 }
 
 @media (max-width: 800px) {
+  .roles .row {
+    column-gap: 20px;
+  }
+
   .roles .row:nth-child(odd) {
     grid-template-columns: 2px 1fr;
     grid-template-areas:
