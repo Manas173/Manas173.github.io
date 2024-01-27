@@ -205,6 +205,15 @@ html {
 }
 
 .services .title::after {
+  content: "what i work";
+  color: crimson;
+}
+
+.roles .title::before {
+  content: "";
+}
+
+.roles .title::after {
   content: "where i work";
   color: crimson;
 }
@@ -806,4 +815,149 @@ html {
   color: crimson; /* Set the color of the heart */
   font-size: 25px; /* Adjust the font size as needed */
   display: inline-block; /* Ensures the heart is treated as an inline element */
+}
+
+.roles {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.roles .row {
+  display: grid;
+  grid-template-columns: 1fr 2px 1fr;
+  grid-column-gap: 40px;
+}
+
+.roles .row .lined {
+  position: relative;
+  background-color: grey;
+  grid-area: theLine;
+}
+
+.roles .row .date {
+  grid-area: theDate;
+}
+
+.roles .lined span {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 2px solid crimson;
+  background-color: white;
+  border-radius: 50%;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.5s;
+}
+
+.row .content {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  grid-area: theContent;
+  font-size: medium;
+}
+.roles .content .text {
+  padding-bottom: 8px;
+  color: crimson;
+  font-weight: 600;
+  font-size: large;
+}
+
+.roles .content p {
+  line-height: 1.5;
+}
+
+.roles .row:nth-child(odd) {
+  grid-template-areas: "theDate theLine theContent";
+}
+
+.roles .row:nth-child(even) {
+  grid-template-areas: "theContent theLine theDate";
+}
+
+.roles .row:nth-child(odd) .date {
+  text-align: right;
+}
+
+.roles .row:nth-child(even) .content {
+  text-align: right;
+}
+
+.roles .content,
+.row .date {
+  margin-bottom: 35px;
+}
+
+.roles .date span {
+  display: inline-block;
+  padding: 5px 10px;
+  font-weight: 800;
+  font-size: small;
+  border: 1px solid #aaa;
+  color: #222;
+  border-radius: 10px;
+}
+.roles .lined .last-point {
+  top: initial;
+  bottom: 0;
+}
+
+.row .last {
+  margin-bottom: 0;
+}
+
+.roles .row:hover .lined span:not(.last-point) {
+  background-color: crimson;
+}
+
+@media (max-width: 800px) {
+  .roles .row:nth-child(odd) {
+    grid-template-columns: 2px 1fr;
+    grid-template-areas:
+      "theLine theDate"
+      "theLine theContent";
+  }
+
+  .roles .row:nth-child(even) {
+    grid-template-columns: 2px 1fr;
+    grid-template-areas:
+      "theLine theDate"
+      "theLine theContent";
+  }
+
+  .roles .row:nth-child(odd) .date {
+    text-align: left;
+  }
+
+  .roles .row:nth-child(even) .content {
+    text-align: left;
+  }
+
+  .roles .date {
+    margin-bottom: 5px;
+  }
+
+  .roles .date span {
+    font-size: x-small;
+  }
+
+  .roles .row .content {
+    margin-bottom: 25px;
+  }
+
+  .roles .row .content p {
+    font-size: smaller;
+    line-height: 1.2;
+  }
+
+  .roles .row .text {
+    font-size: small;
+  }
+
+  .roles .row last {
+    margin-bottom: 5px;
+  }
 }

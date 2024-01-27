@@ -1,5 +1,9 @@
 if ($(window).width() < 948) {
   $(".navbar .menu").toggle();
+
+  $(".menu").click(function () {
+    $(".navbar .menu").toggle("active");
+  });
 }
 
 $(document).ready(function () {
@@ -12,10 +16,6 @@ $(document).ready(function () {
   });
 
   $(".menu-btn").click(function () {
-    $(".navbar .menu").toggle("active");
-  });
-
-  $(".menu").click(function () {
     $(".navbar .menu").toggle("active");
   });
 });
